@@ -12,10 +12,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool isTrigger = false;
 
-    public void Start()
-    {
-        interactionUI = GameObject.Find("InteractionUI");
-    }
 
     public void Update()
     {
