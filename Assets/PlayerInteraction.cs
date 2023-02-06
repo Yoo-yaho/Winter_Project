@@ -12,6 +12,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool isTrigger = false;
 
+
     public void Update()
     {
         interactionUI.SetActive(isTrigger);
