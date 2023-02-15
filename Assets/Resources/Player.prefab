@@ -2216,6 +2216,7 @@ MonoBehaviour:
   backwardSpeed: 2
   rotateSpeed: 2
   jumpPower: 2
+  chatManager: {fileID: 0}
 --- !u!114 &5304774515878316965
 MonoBehaviour:
   m_ObjectHideFlags: 0

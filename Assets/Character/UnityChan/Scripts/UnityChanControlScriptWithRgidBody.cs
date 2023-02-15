@@ -31,6 +31,9 @@ namespace UnityChan
 		public float rotateSpeed = 2.0f;
 		// ジャンプ威力
 		public float jumpPower = 3.0f; 
+
+		public ChatManager chatManager;
+
 		// キャラクターコントローラ（カプセルコライダ）の参照
 		private CapsuleCollider col;
 		private Rigidbody rb;
@@ -63,13 +66,16 @@ namespace UnityChan
 			// CapsuleColliderコンポーネントのHeight、Centerの初期値を保存する
 			orgColHight = col.height;
 			orgVectColCenter = col.center;
+			chatManager = GameObject.Find("ChatManager").GetComponent<ChatManager>();
 		}
 	
 	
 		// 以下、メイン処理.リジッドボディと絡めるので、FixedUpdate内で処理を行う.
 		void FixedUpdate ()
 		{
-			float h = Input.GetAxis ("Horizontal");				// 入力デバイスの水平軸をhで定義
+			if (!chatManager.isChatting)
+			{
+				float h = Input.GetAxis ("Horizontal");				// 入力デバイスの水平軸をhで定義
 			float v = Input.GetAxis ("Vertical");				// 入力デバイスの垂直軸をvで定義
 			anim.SetFloat ("Speed", v);							// Animator側で設定している"Speed"パラメタにvを渡す
 			anim.SetFloat ("Direction", h); 						// Animator側で設定している"Direction"パラメタにhを渡す
@@ -175,6 +181,7 @@ namespace UnityChan
 				if (!anim.IsInTransition (0)) {
 					anim.SetBool ("Rest", false);
 				}
+			}
 			}
 		}
 
