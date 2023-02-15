@@ -21,8 +21,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 947
+    width: 2560
+    height: 1307
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\ehdrk\\OneDrive\\\uBB38\uC11C\\GitHub\\Winter_Project"
+  m_LastProjectPath: C:\Users\bonit\Desktop\Github\Winter_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
