@@ -36,15 +36,8 @@ public class NetWorkManager : MonoBehaviourPunCallbacks
 
     public void connect()
     {
-        if (PhotonNetwork.IsConnected)
-        {
-            PhotonNetwork.JoinRandomRoom();
-        }
-        else
-        {
             PhotonNetwork.GameVersion = gamever;
             PhotonNetwork.ConnectUsingSettings();
-        }
     }
 
 
