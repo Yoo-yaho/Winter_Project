@@ -15,7 +15,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
     PhotonView photonview;
     GameObject m_ContentText;
  
-    string m_strUserName;
+    string userName;
  
     void Start()
     {
@@ -26,9 +26,9 @@ public class ChatManager : MonoBehaviourPunCallbacks
  
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && m_inputField.isFocused == false) // 채팅 상태가 아닐때 엔터를 누르면 채팅창 활성화
+        if (Input.GetKeyDown(KeyCode.Return)) // 엔터를 누르면 채팅창 활성화/비활성화
         {
-            m_inputField.ActivateInputField();
+            m_inputField.Select();
         }
 
         if(m_inputField.isFocused == true)
@@ -36,50 +36,37 @@ public class ChatManager : MonoBehaviourPunCallbacks
         else
             isChatting = false;
     }
-
-    public override void OnConnectedToMaster()
-    {
-        RoomOptions options = new RoomOptions();
-        options.MaxPlayers = 5;
- 
-        int nRandomKey = Random.Range(0, 100);
- 
-        m_strUserName = "user" + nRandomKey;
- 
-        PhotonNetwork.LocalPlayer.NickName = m_strUserName;
-        PhotonNetwork.JoinOrCreateRoom("Room1", options, null);
-    }
  
     public override void OnJoinedRoom()
     {
-        AddChatMessage("connect user : " + PhotonNetwork.LocalPlayer.NickName);
+        userName = PhotonNetwork.LocalPlayer.NickName;
+        AddChatMessage(userName + " 님이 입장했습니다.");
     }
  
-    public void OnEndEditEvent()
+    public void OnEndEditEvent() // 채팅 입력 함수 (엔터)
     {
         if (Input.GetKeyDown(KeyCode.Return) && m_inputField.text != "")
         {
-            string strMessage = m_strUserName + " : " + m_inputField.text;
- 
+            string strMessage = userName + " : " + m_inputField.text;
+            photonview.RPC("RPC_Chat", RpcTarget.All, strMessage);
+            m_inputField.text = "";
+        }
+    }
+
+    public void EnterChat() // 채팅 입력 함수 (버튼)
+    {
+        if(m_inputField.text != "")
+        {
+            string strMessage = userName + " : " + m_inputField.text;
             photonview.RPC("RPC_Chat", RpcTarget.All, strMessage);
             m_inputField.text = "";
         }
     }
  
-    void AddChatMessage(string message) // 채팅 입력
+    void AddChatMessage(string message) // 채팅 출력 함수
     {
-        /*GameObject goText = Instantiate(m_ContentText, m_Content.transform);
- 
-        goText.GetComponent<TextMeshProUGUI>().text = message;
-        m_Content.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;*/
-
         GameObject goText = Instantiate(m_ContentText, m_Content.transform);
         goText.GetComponent<TextMeshProUGUI>().text = message;
-    
-        RectTransform rectTransform = goText.GetComponent<RectTransform>();
-        rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y - (rectTransform.sizeDelta.y * m_Content.transform.childCount));
-    
-        m_Content.GetComponent<RectTransform>().sizeDelta = new Vector2(m_Content.GetComponent<RectTransform>().sizeDelta.x, m_Content.GetComponent<RectTransform>().sizeDelta.y + rectTransform.sizeDelta.y);
     }
  
     [PunRPC]
@@ -87,5 +74,4 @@ public class ChatManager : MonoBehaviourPunCallbacks
     {
         AddChatMessage(message);
     }
- 
 }
