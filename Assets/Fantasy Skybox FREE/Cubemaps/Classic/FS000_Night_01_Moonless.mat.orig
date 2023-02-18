@@ -56,14 +56,14 @@ Material:
     m_Floats:
     - _Exposure: 1
 <<<<<<< HEAD
-    - _Rotation: 5.490556
+    - _Rotation: 4.2471304
 =======
 <<<<<<< HEAD
     - _Rotation: 16.372578
 =======
     - _Rotation: 13.736958
 >>>>>>> b93a7d8102e79da8d08c2b9166f7b6557010a144
->>>>>>> Client
+>>>>>>> 8f006ca4a9ce5f2a5580bf6919c41fbd4df1899f
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
