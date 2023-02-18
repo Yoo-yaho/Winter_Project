@@ -21,12 +21,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2560
-    height: 1307
+    width: 1920
+    height: 947
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 89
+  controlID: 96
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 73
+  controlID: 62
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -417,9 +417,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1251.078, y: 740.54486, z: -9.432617}
+    m_Target: {x: 1232.8163, y: 729.8471, z: -6.5242515}
     speed: 2
-    m_Value: {x: 1251.078, y: 740.54486, z: -9.432617}
+    m_Value: {x: 1232.8163, y: 729.8471, z: -6.5242515}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -470,9 +470,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 857.2683
+    m_Target: 566.4311
     speed: 2
-    m_Value: 857.2683
+    m_Value: 566.4311
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -582,7 +582,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1cfbffff
+      m_ExpandedIDs: d0faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -680,14 +680,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\bonit\Desktop\Github\Winter_Project
+  m_LastProjectPath: "C:\\Users\\ehdrk\\OneDrive\\\uBB38\uC11C\\GitHub\\Winter_Project"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 2ec40000
     m_LastClickedID: 50222
-    m_ExpandedIDs: 000000006e72000070720000727200007472000076720000787200007a7200007c7200007e7200008072000082720000
+    m_ExpandedIDs: 000000001c8000001e80000020800000228000002480000026800000288000002a8000002c8000002e80000030800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -713,9 +713,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 00730000
-    m_LastClickedID: 29440
-    m_ExpandedIDs: ffffffff000000006e72000070720000727200007472000076720000787200007a7200007c7200007e7200008072000082720000
+    m_SelectedIDs: b0800000
+    m_LastClickedID: 32944
+    m_ExpandedIDs: ffffffff000000001c8000001e80000020800000228000002480000026800000288000002a8000002c8000002e80000030800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,8 +740,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 00730000
-    m_LastClickedInstanceID: 29440
+    m_SelectedInstanceIDs: b0800000
+    m_LastClickedInstanceID: 32944
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -832,7 +832,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 29440
+  m_LastInspectedObjectInstanceID: 32944
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
