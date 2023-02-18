@@ -6,6 +6,9 @@ using Photon.Realtime;
 
 public class NetWorkManager : MonoBehaviourPunCallbacks 
 {
+    public GameObject chatUI;
+    public GameObject loginUI;
+
     [SerializeField]
     private byte m_MaxPlayer = 8;
 
@@ -27,6 +30,8 @@ public class NetWorkManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom() //룸에 입장시 콜백되는 함수
     {
         Debug.Log("Welcome this room!");
+        chatUI.SetActive(true);
+        loginUI.SetActive(false);
     }
 
     public void connect()
